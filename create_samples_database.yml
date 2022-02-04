@@ -29,8 +29,8 @@
         permanent: true
         state: enabled
 
-   # - name: Ensure the samples database exists
-   #   community.mysql.mysql_db:
-   #     name: samples
-   #     state: present
+    - name: Ensure the samples database exists
+      community.mysql.mysql_db:
+        name: samples
+        state: present
 
