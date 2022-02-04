@@ -3,6 +3,12 @@
   hosts: all 
 
   tasks:
+    - name: Ensure PyMySql is installed
+      ansible.builtin.yum:
+        name:
+          - python38-PyMySQL  
+        state: present
+
     - name: Ensure MariaDB is installed
       ansible.builtin.yum:
         name:
