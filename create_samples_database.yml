@@ -1,7 +1,6 @@
 ---
 - name: Create samples database
-  hosts: serverb.lab.example.com
-  become: true
+  hosts: all 
 
   tasks:
     - name: Ensure MariaDB is installed
