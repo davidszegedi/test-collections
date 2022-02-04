@@ -2,3 +2,5 @@
 collections:
   - name: community.mysql
 
+  - name: ansible.posix
+

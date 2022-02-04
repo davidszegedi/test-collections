@@ -6,7 +6,7 @@
     - name: Ensure PyMySql is installed
       ansible.builtin.yum:
         name:
-          - python38-PyMySQL  
+          - python38-PyMySQL 
         state: present
 
     - name: Ensure MariaDB is installed
@@ -22,8 +22,15 @@
         state: started
         enabled: true
 
-    - name: Ensure the samples database exists
-      community.mysql.mysql_db:
-        name: samples
-        state: present
+    - name: Open access to mysql
+      ansible.posix.firewalld:
+        service: mysql
+        immediate: true
+        permanent: true
+        state: enabled
+
+   # - name: Ensure the samples database exists
+   #   community.mysql.mysql_db:
+   #     name: samples
+   #     state: present
 
