@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+
+  tasks:
+  - import_role:
+      name: redhat.demo_collection.hello_motd
+    vars:
+      friend_name: "Friend1"
