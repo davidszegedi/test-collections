@@ -4,4 +4,4 @@ collections:
 #  - name: ansible.posix
   - name: redhat.demo_collection
     source: https://aap-ah01.infra.dszlab.net/api/galaxy/content/published/
-    version: "1.0.0"
+#   version: "1.0.0"
